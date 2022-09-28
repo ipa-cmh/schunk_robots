@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" >
   <xacro:property name="safety_offset" value="0.02"/>
 
   <xacro:include filename="$(find schunk_description)/urdf/common.xacro" />
@@ -284,4 +284,3 @@
   </xacro:macro>
 
 </robot>
-
