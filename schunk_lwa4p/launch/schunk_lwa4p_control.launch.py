@@ -68,9 +68,9 @@ def generate_launch_description():
     start_rviz = LaunchConfiguration("start_rviz")
 
     base_launch = IncludeLaunchDescription(
-        PythonLaunchDescriptionSource([ThisLaunchFileDir(), "/schunk_lwa4p_base.launch.py"]),
+        PythonLaunchDescriptionSource([ThisLaunchFileDir(), "/schunk_lwa4p_control_base.launch.py"]),
         launch_arguments={
-            "description_file": "schunk_lwa4p_system_position_only.urdf.xacro",
+            "description_file": "schunk_lwa4p.urdf.xacro",
             "prefix": prefix,
             "use_mock_hardware": use_mock_hardware,
             "mock_sensor_commands": mock_sensor_commands,

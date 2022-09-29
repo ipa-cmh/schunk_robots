@@ -23,7 +23,7 @@ https://github.com/ros-controls/ros2_control_demos/blob/master/ros2_control_demo
   <xacro:include filename="$(find schunk_description)/urdf/materials.urdf.xacro" />
 
   <!-- Import RRBot ros2_control description -->
-  <xacro:include filename="$(find schunk_description)/ros2_control/schunk_lwa4p_system_position_only.ros2_control.xacro" />
+  <xacro:include filename="$(find schunk_description)/ros2_control/schunk_lwa4p_mock_hardware.ros2_control.xacro" />
 
   <!-- Used for fixing robot -->
   <link name="world"/>
@@ -35,8 +35,8 @@ https://github.com/ros-controls/ros2_control_demos/blob/master/ros2_control_demo
     <origin xyz="0 0 0" rpy="0 0 0" />
   </xacro:schunk_lwa4p>
 
-  <xacro:schunk_lwa4p_system_position_only
-    name="SchunkLwa4pSystemPositionOnly" prefix="$(arg prefix)arm"
+  <xacro:schunk_lwa4p_mock_hardware
+    name="$(arg prefix)arm"
     use_mock_hardware="$(arg use_mock_hardware)"
     mock_sensor_commands="$(arg mock_sensor_commands)"
     use_gazebo="$(arg use_gazebo)"/>
